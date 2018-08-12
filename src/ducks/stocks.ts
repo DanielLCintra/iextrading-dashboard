@@ -41,10 +41,10 @@ interface ILoadStocksFailed {
 // Action creators
 
 export const loadStocksStarted = ():ILoadStocksStarted =>
-    ({ type: LOAD_STOCKS_STARTED });
+  ({ type: LOAD_STOCKS_STARTED });
 
 export const loadStocksSucceed = (data:IStock[]):ILoadStocksSucceed =>
-    ({ type: LOAD_STOCKS_SUCCEED, data });
+  ({ type: LOAD_STOCKS_SUCCEED, data });
 
 export const loadStocksFailed = (error:Error):ILoadStocksFailed =>
   ({ type: LOAD_STOCKS_FAILED, error });

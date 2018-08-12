@@ -2,6 +2,7 @@ import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../../assets/iex-logo.png';
+import SymbolSearch from '../SymbolSearch';
 import classes from './Header.scss';
 
 class Header extends React.Component {
@@ -25,6 +26,7 @@ class Header extends React.Component {
             Bigest stocks
           </Typography>
         </Typography>
+        <SymbolSearch />
       </header>
     );
   }
