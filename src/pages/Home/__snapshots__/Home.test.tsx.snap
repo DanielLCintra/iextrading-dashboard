@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home renders without crashing 1`] = `
+exports[`Home Page renders without crashing 1`] = `
 <Home
   loadStocks={
     [MockFunction] {

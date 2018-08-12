@@ -59,7 +59,6 @@ export const loadStocks = () =>
       dispatch(loadStocksSucceed(results.data));
       return Promise.resolve(results);
     } catch (error) {
-      console.error('Could not get stocks.', error);
       dispatch(loadStocksFailed(error));
       return Promise.reject(error);
     }

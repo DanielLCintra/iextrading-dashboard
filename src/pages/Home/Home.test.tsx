@@ -2,7 +2,7 @@ import { mount } from 'enzyme';
 import * as React from 'react';
 import Home, { IHomeProps } from './Home';
 
-describe('Home', () => {
+describe('Home Page', () => {
   const mockLoadStocks = jest.fn();
   const props:IHomeProps = {
     loadStocks: mockLoadStocks,
@@ -15,14 +15,12 @@ describe('Home', () => {
 
   const wrapper = mount(<Home {...props} />);
 
-  beforeEach(() => {
-    mockLoadStocks.mockClear();
-  });
   it('renders without crashing', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should try to load stocks', () => {
+    wrapper.mount();
     expect(mockLoadStocks).toBeCalled();
   });
 });
