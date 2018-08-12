@@ -1,4 +1,11 @@
 .StockCard {
   margin-bottom: 15px;
-  cursor: pointer;
+
+  &Link {
+    color: inherit;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    text-decoration-color: inherit;
+  }
 }
