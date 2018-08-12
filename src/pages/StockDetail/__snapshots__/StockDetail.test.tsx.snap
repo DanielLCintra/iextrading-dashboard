@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Page renders without crashing 1`] = `
-<Home
-  loadStocks={
-    [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-    }
-  }
-  stocks={
-    Object {
-      "data": null,
-      "error": null,
-      "loading": false,
-    }
-  }
->
+exports[`StockDetail renders without crashing 1`] = `
+<StockDetail>
   <div>
     <Header>
       <header>
@@ -146,7 +131,6 @@ exports[`Home Page renders without crashing 1`] = `
         </WithStyles(Typography)>
       </header>
     </Header>
-    <div />
   </div>
-</Home>
+</StockDetail>
 `;

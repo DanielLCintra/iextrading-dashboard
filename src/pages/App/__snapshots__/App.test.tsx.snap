@@ -1,20 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders without crashing 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
->
-  <div>
-    <WithStyles(CssBaseline) />
-    <Connect(Home) />
-  </div>
-</Provider>
+<div>
+  <WithStyles(CssBaseline) />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    path="/stock"
+  />
+</div>
 `;

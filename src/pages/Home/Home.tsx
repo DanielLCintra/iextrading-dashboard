@@ -1,5 +1,5 @@
-import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
+import Header from '../../components/Header';
 import StockCard from '../../components/StockCard';
 import { IStock, IStocksState } from '../../ducks/stocks';
 import classes from './Home.scss';
@@ -18,22 +18,7 @@ class Home extends React.Component<any, IHomeProps> {
     const stocks = this.props.stocks.data || [];
     return (
       <div className={classes.wrapper}>
-        <header className={classes.header}>
-          <Typography
-            className={classes.headerTitle}
-            variant="display3"
-            component="h1"
-          >
-            IEX Trading
-            <Typography
-              className={classes.headerSubTitle}
-              variant="display1"
-              component="small"
-            >
-              Bigest stocks
-            </Typography>
-          </Typography>
-        </header>
+        <Header />
         <div className={classes.stocksList}>
           {
             stocks.map((stock:IStock) => (
