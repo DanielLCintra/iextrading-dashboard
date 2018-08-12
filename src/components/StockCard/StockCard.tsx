@@ -15,7 +15,7 @@ class StockCard extends React.Component<any, IStockCardProps> {
     const stock = this.props.stock;
     return (
       <Link
-        to={`/stock?symbol=${stock.symbol}`}
+        to={`/stock/${stock.symbol}`}
         className={classes.StockCardLink}
       >
         <Card className={classes.StockCard}>
