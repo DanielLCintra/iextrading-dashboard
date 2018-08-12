@@ -1,7 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home renders without crashing 1`] = `
-<Home>
+<Home
+  loadStocks={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+    }
+  }
+  stocks={
+    Object {
+      "data": null,
+      "error": null,
+      "loading": false,
+    }
+  }
+>
   <div>
     <header>
       <img
@@ -18,6 +33,15 @@ exports[`Home renders without crashing 1`] = `
       </code>
        and save to reload.
     </p>
+    <pre>
+      <code>
+        {
+  "data": null,
+  "error": null,
+  "loading": false
+}
+      </code>
+    </pre>
   </div>
 </Home>
 `;
