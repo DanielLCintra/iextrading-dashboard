@@ -34,7 +34,7 @@ export const LOAD_COMPANY_SUCCEED = `${DUCK_NAME}/LOAD_COMPANY_SUCCEED`;
 interface ILoadCompanySucceed {
   symbol: string,
   type: typeof LOAD_COMPANY_SUCCEED,
-  data: ICompany[],
+  data: ICompany,
 }
 
 export const LOAD_COMPANY_FAILED = `${DUCK_NAME}/LOAD_COMPANY_FAILED`;
@@ -49,7 +49,7 @@ interface ILoadCompanyFailed {
 export const loadCompanyStarted = (symbol:string):ILoadCompanyStarted =>
     ({ symbol, type: LOAD_COMPANY_STARTED });
 
-export const loadCompanySucceed = (symbol:string, data:ICompany[]):ILoadCompanySucceed =>
+export const loadCompanySucceed = (symbol:string, data:ICompany):ILoadCompanySucceed =>
     ({ symbol, type: LOAD_COMPANY_SUCCEED, data });
 
 export const loadCompanyFailed = (symbol:string, error:Error):ILoadCompanyFailed =>
@@ -74,13 +74,20 @@ export const loadCompany = (symbol:string) =>
 
 export const INITIAL_STATE:Map<string, ICompanyState> = new Map();
 
+export const INITIAL_COMPANY_STATE:ICompanyState = {
+  data: null,
+  error: null,
+  loading: false,
+};
+
 const reducer = (state = INITIAL_STATE, action:AnyAction) => {
+  const company = state[action.symbol] || INITIAL_COMPANY_STATE;
+
   switch (action.type) {
   case LOAD_COMPANY_STARTED:
     return new Map(state)
       .set(action.symbol, {
-        data: null,
-        error: null,
+        ...company,
         loading: true,
       });
   case LOAD_COMPANY_SUCCEED:

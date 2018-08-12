@@ -1,5 +1,6 @@
 import { mount } from 'enzyme';
 import * as React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { createFakeStock } from '../../ducks/stocks.test';
 import StockCard, { IStockCardProps } from './StockCard';
 
@@ -8,7 +9,11 @@ describe('StockCard', () => {
     stock: createFakeStock(),
   };
 
-  const wrapper = mount(<StockCard {...props} />);
+  const wrapper = mount(
+    <MemoryRouter>
+      <StockCard {...props} />
+    </MemoryRouter>
+  );
 
   it('renders without crashing', () => {
     expect(wrapper).toMatchSnapshot();

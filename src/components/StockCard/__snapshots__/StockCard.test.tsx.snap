@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCard renders without crashing 1`] = `
+<MemoryRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "yo7ppu",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "yo7ppu",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <StockCard
+      stock={
+        Object {
+          "companyName": "Testing Co",
+          "latestPrice": 0,
+          "sector": "Tests",
+          "symbol": "TST",
+          "ytdChange": 0,
+        }
+      }
+    >
+      <Link
+        replace={false}
+        to="/stock/TST"
+      >
+        <a
+          href="/stock/TST"
+          onClick={[Function]}
+        >
+          <WithStyles(Card)>
+            <Card
+              classes={
+                Object {
+                  "root": "MuiCard-root-1",
+                }
+              }
+              raised={false}
+            >
+              <WithStyles(Paper)
+                className="MuiCard-root-1"
+                elevation={1}
+              >
+                <Paper
+                  className="MuiCard-root-1"
+                  classes={
+                    Object {
+                      "elevation0": "MuiPaper-elevation0-4",
+                      "elevation1": "MuiPaper-elevation1-5",
+                      "elevation10": "MuiPaper-elevation10-14",
+                      "elevation11": "MuiPaper-elevation11-15",
+                      "elevation12": "MuiPaper-elevation12-16",
+                      "elevation13": "MuiPaper-elevation13-17",
+                      "elevation14": "MuiPaper-elevation14-18",
+                      "elevation15": "MuiPaper-elevation15-19",
+                      "elevation16": "MuiPaper-elevation16-20",
+                      "elevation17": "MuiPaper-elevation17-21",
+                      "elevation18": "MuiPaper-elevation18-22",
+                      "elevation19": "MuiPaper-elevation19-23",
+                      "elevation2": "MuiPaper-elevation2-6",
+                      "elevation20": "MuiPaper-elevation20-24",
+                      "elevation21": "MuiPaper-elevation21-25",
+                      "elevation22": "MuiPaper-elevation22-26",
+                      "elevation23": "MuiPaper-elevation23-27",
+                      "elevation24": "MuiPaper-elevation24-28",
+                      "elevation3": "MuiPaper-elevation3-7",
+                      "elevation4": "MuiPaper-elevation4-8",
+                      "elevation5": "MuiPaper-elevation5-9",
+                      "elevation6": "MuiPaper-elevation6-10",
+                      "elevation7": "MuiPaper-elevation7-11",
+                      "elevation8": "MuiPaper-elevation8-12",
+                      "elevation9": "MuiPaper-elevation9-13",
+                      "root": "MuiPaper-root-2",
+                      "rounded": "MuiPaper-rounded-3",
+                    }
+                  }
+                  component="div"
+                  elevation={1}
+                  square={false}
+                >
+                  <div
+                    className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+                  >
+                    <WithStyles(CardContent)>
+                      <CardContent
+                        classes={
+                          Object {
+                            "root": "MuiCardContent-root-29",
+                          }
+                        }
+                        component="div"
+                      >
+                        <div
+                          className="MuiCardContent-root-29"
+                        >
+                          <WithStyles(Typography)
+                            color="textSecondary"
+                          >
+                            <Typography
+                              align="inherit"
+                              classes={
+                                Object {
+                                  "alignCenter": "MuiTypography-alignCenter-43",
+                                  "alignJustify": "MuiTypography-alignJustify-45",
+                                  "alignLeft": "MuiTypography-alignLeft-42",
+                                  "alignRight": "MuiTypography-alignRight-44",
+                                  "body1": "MuiTypography-body1-39",
+                                  "body2": "MuiTypography-body2-38",
+                                  "button": "MuiTypography-button-41",
+                                  "caption": "MuiTypography-caption-40",
+                                  "colorError": "MuiTypography-colorError-54",
+                                  "colorInherit": "MuiTypography-colorInherit-49",
+                                  "colorPrimary": "MuiTypography-colorPrimary-50",
+                                  "colorSecondary": "MuiTypography-colorSecondary-51",
+                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-52",
+                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-53",
+                                  "display1": "MuiTypography-display1-34",
+                                  "display2": "MuiTypography-display2-33",
+                                  "display3": "MuiTypography-display3-32",
+                                  "display4": "MuiTypography-display4-31",
+                                  "gutterBottom": "MuiTypography-gutterBottom-47",
+                                  "headline": "MuiTypography-headline-35",
+                                  "noWrap": "MuiTypography-noWrap-46",
+                                  "paragraph": "MuiTypography-paragraph-48",
+                                  "root": "MuiTypography-root-30",
+                                  "subheading": "MuiTypography-subheading-37",
+                                  "title": "MuiTypography-title-36",
+                                }
+                              }
+                              color="textSecondary"
+                              gutterBottom={false}
+                              headlineMapping={
+                                Object {
+                                  "body1": "p",
+                                  "body2": "aside",
+                                  "display1": "h1",
+                                  "display2": "h1",
+                                  "display3": "h1",
+                                  "display4": "h1",
+                                  "headline": "h1",
+                                  "subheading": "h3",
+                                  "title": "h2",
+                                }
+                              }
+                              noWrap={false}
+                              paragraph={false}
+                              variant="body1"
+                            >
+                              <p
+                                className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-53"
+                              >
+                                Testing Co
+                              </p>
+                            </Typography>
+                          </WithStyles(Typography)>
+                          <WithStyles(Typography)
+                            component="h2"
+                            variant="headline"
+                          >
+                            <Typography
+                              align="inherit"
+                              classes={
+                                Object {
+                                  "alignCenter": "MuiTypography-alignCenter-43",
+                                  "alignJustify": "MuiTypography-alignJustify-45",
+                                  "alignLeft": "MuiTypography-alignLeft-42",
+                                  "alignRight": "MuiTypography-alignRight-44",
+                                  "body1": "MuiTypography-body1-39",
+                                  "body2": "MuiTypography-body2-38",
+                                  "button": "MuiTypography-button-41",
+                                  "caption": "MuiTypography-caption-40",
+                                  "colorError": "MuiTypography-colorError-54",
+                                  "colorInherit": "MuiTypography-colorInherit-49",
+                                  "colorPrimary": "MuiTypography-colorPrimary-50",
+                                  "colorSecondary": "MuiTypography-colorSecondary-51",
+                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-52",
+                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-53",
+                                  "display1": "MuiTypography-display1-34",
+                                  "display2": "MuiTypography-display2-33",
+                                  "display3": "MuiTypography-display3-32",
+                                  "display4": "MuiTypography-display4-31",
+                                  "gutterBottom": "MuiTypography-gutterBottom-47",
+                                  "headline": "MuiTypography-headline-35",
+                                  "noWrap": "MuiTypography-noWrap-46",
+                                  "paragraph": "MuiTypography-paragraph-48",
+                                  "root": "MuiTypography-root-30",
+                                  "subheading": "MuiTypography-subheading-37",
+                                  "title": "MuiTypography-title-36",
+                                }
+                              }
+                              color="default"
+                              component="h2"
+                              gutterBottom={false}
+                              headlineMapping={
+                                Object {
+                                  "body1": "p",
+                                  "body2": "aside",
+                                  "display1": "h1",
+                                  "display2": "h1",
+                                  "display3": "h1",
+                                  "display4": "h1",
+                                  "headline": "h1",
+                                  "subheading": "h3",
+                                  "title": "h2",
+                                }
+                              }
+                              noWrap={false}
+                              paragraph={false}
+                              variant="headline"
+                            >
+                              <h2
+                                className="MuiTypography-root-30 MuiTypography-headline-35"
+                              >
+                                TST
+                              </h2>
+                            </Typography>
+                          </WithStyles(Typography)>
+                          <WithStyles(Typography)
+                            color="textSecondary"
+                          >
+                            <Typography
+                              align="inherit"
+                              classes={
+                                Object {
+                                  "alignCenter": "MuiTypography-alignCenter-43",
+                                  "alignJustify": "MuiTypography-alignJustify-45",
+                                  "alignLeft": "MuiTypography-alignLeft-42",
+                                  "alignRight": "MuiTypography-alignRight-44",
+                                  "body1": "MuiTypography-body1-39",
+                                  "body2": "MuiTypography-body2-38",
+                                  "button": "MuiTypography-button-41",
+                                  "caption": "MuiTypography-caption-40",
+                                  "colorError": "MuiTypography-colorError-54",
+                                  "colorInherit": "MuiTypography-colorInherit-49",
+                                  "colorPrimary": "MuiTypography-colorPrimary-50",
+                                  "colorSecondary": "MuiTypography-colorSecondary-51",
+                                  "colorTextPrimary": "MuiTypography-colorTextPrimary-52",
+                                  "colorTextSecondary": "MuiTypography-colorTextSecondary-53",
+                                  "display1": "MuiTypography-display1-34",
+                                  "display2": "MuiTypography-display2-33",
+                                  "display3": "MuiTypography-display3-32",
+                                  "display4": "MuiTypography-display4-31",
+                                  "gutterBottom": "MuiTypography-gutterBottom-47",
+                                  "headline": "MuiTypography-headline-35",
+                                  "noWrap": "MuiTypography-noWrap-46",
+                                  "paragraph": "MuiTypography-paragraph-48",
+                                  "root": "MuiTypography-root-30",
+                                  "subheading": "MuiTypography-subheading-37",
+                                  "title": "MuiTypography-title-36",
+                                }
+                              }
+                              color="textSecondary"
+                              gutterBottom={false}
+                              headlineMapping={
+                                Object {
+                                  "body1": "p",
+                                  "body2": "aside",
+                                  "display1": "h1",
+                                  "display2": "h1",
+                                  "display3": "h1",
+                                  "display4": "h1",
+                                  "headline": "h1",
+                                  "subheading": "h3",
+                                  "title": "h2",
+                                }
+                              }
+                              noWrap={false}
+                              paragraph={false}
+                              variant="body1"
+                            >
+                              <p
+                                className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-53"
+                              >
+                                Tests
+                              </p>
+                            </Typography>
+                          </WithStyles(Typography)>
+                        </div>
+                      </CardContent>
+                    </WithStyles(CardContent)>
+                  </div>
+                </Paper>
+              </WithStyles(Paper)>
+            </Card>
+          </WithStyles(Card)>
+        </a>
+      </Link>
+    </StockCard>
+  </Router>
+</MemoryRouter>
+`;

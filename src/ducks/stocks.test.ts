@@ -65,8 +65,8 @@ describe('stocks duck', () => {
       mockGetStocks.mockResolvedValue({ data });
 
       const expectedActions = [
-        { type: LOAD_STOCKS_STARTED },
-        { type: LOAD_STOCKS_SUCCEED, data },
+        loadStocksStarted(),
+        loadStocksSucceed(data),
       ];
 
       store.dispatch<any>(loadStocks())
@@ -82,8 +82,8 @@ describe('stocks duck', () => {
       mockGetStocks.mockRejectedValue(error);
 
       const expectedActions = [
-        { type: LOAD_STOCKS_STARTED },
-        { type: LOAD_STOCKS_FAILED, error },
+        loadStocksStarted(),
+        loadStocksFailed(error),
       ];
 
       store.dispatch<any>(loadStocks())

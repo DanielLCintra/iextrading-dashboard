@@ -1,6 +1,7 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
+import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 import { ICompany } from '../../ducks/company';
@@ -16,11 +17,13 @@ class CompanyCard extends React.Component<any, ICompanyCardProps> {
     return (
       <a
         href={company.website}
-        title={company.companyName}
+        title={`Go to ${company.companyName} website`}
         className={classes.CompanyCardLink}
+        target="_blank"
       >
         <Card className={classes.CompanyCard}>
           <CardContent>
+            <Icon className={classes.CompanyCardBlankIcon}>open_in_new</Icon>
             <Typography
               className={classes.CompanyCardCompanyName}
               color="textSecondary"
