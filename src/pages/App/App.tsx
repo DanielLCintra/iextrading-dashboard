@@ -1,3 +1,4 @@
+import CssBaseline from '@material-ui/core/CssBaseline';
 import * as React from 'react';
 import { Provider } from 'react-redux'
 import { applyMiddleware, createStore } from 'redux'
@@ -15,7 +16,10 @@ class App extends React.Component {
   public render() {
     return (
       <Provider store={store}>
-        <Home />
+        <React.Fragment>
+          <CssBaseline />
+          <Home />
+        </React.Fragment>
       </Provider>
     );
   }
