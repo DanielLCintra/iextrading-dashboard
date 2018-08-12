@@ -15,15 +15,16 @@ class CompanyCard extends React.Component<any, ICompanyCardProps> {
   public render() {
     const company = this.props.company;
     return (
-      <a
-        href={company.website}
-        title={`Go to ${company.companyName} website`}
-        className={classes.CompanyCardLink}
-        target="_blank"
-      >
         <Card className={classes.CompanyCard}>
           <CardContent>
-            <Icon className={classes.CompanyCardBlankIcon}>open_in_new</Icon>
+            <a
+              href={company.website}
+              title={`Go to ${company.companyName} website`}
+              className={classes.CompanyCardLink}
+              target="_blank"
+            >
+              <Icon>open_in_new</Icon>
+            </a>
             <Typography
               className={classes.CompanyCardCompanyName}
               color="textSecondary"
@@ -47,7 +48,7 @@ class CompanyCard extends React.Component<any, ICompanyCardProps> {
               className={classes.CompanyCardCEO}
               color="textSecondary"
             >
-              {company.CEO}
+              CEO: {company.CEO}
             </Typography>
             <Typography
               className={classes.CompanyCardDescription}
@@ -68,7 +69,6 @@ class CompanyCard extends React.Component<any, ICompanyCardProps> {
             </div>
           </CardContent>
         </Card>
-      </a>
     );
   }
 }
