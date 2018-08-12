@@ -10,7 +10,7 @@ export interface IStockCardProps {
   stock: IStock,
 };
 
-class StockCard extends React.Component<any, IStockCardProps> {
+class StockCard extends React.Component<IStockCardProps> {
   public render() {
     const stock = this.props.stock;
     return (

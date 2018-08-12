@@ -11,10 +11,10 @@ export interface IRouterProps {
 
 export interface IStockDetailProps extends RouteComponentProps<IRouterProps> {
   company: ICompanyState,
-  loadCompany: () => any,
+  loadCompany: (symbol:string) => any,
 }
 
-class StockDetail extends React.Component<any, IStockDetailProps> {
+class StockDetail extends React.Component<IStockDetailProps> {
   public componentDidMount() {
     const {
       loadCompany,

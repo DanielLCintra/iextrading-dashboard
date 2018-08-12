@@ -9,7 +9,7 @@ export interface IHomeProps {
   stocks: IStocksState,
 }
 
-class Home extends React.Component<any, IHomeProps> {
+class Home extends React.Component<IHomeProps> {
   public componentDidMount() {
     this.props.loadStocks();
   }

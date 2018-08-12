@@ -11,7 +11,7 @@ export interface ICompanyCardProps {
   company: ICompany,
 };
 
-class CompanyCard extends React.Component<any, ICompanyCardProps> {
+class CompanyCard extends React.Component<ICompanyCardProps> {
   public render() {
     const company = this.props.company;
     return (
