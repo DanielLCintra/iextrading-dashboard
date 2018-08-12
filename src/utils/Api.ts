@@ -26,6 +26,10 @@ class Api {
     public getStocks(reqConfig?:AxiosRequestConfig) {
         return this.axios.get('/stock/market/list/gainers', reqConfig);
     }
+
+    public getCompany(symbol:string, reqConfig?:AxiosRequestConfig) {
+        return this.axios.get(`/stock/${symbol}/company`, reqConfig);
+    }
 }
 
 export default Api;
