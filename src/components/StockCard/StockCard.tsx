@@ -1,6 +1,4 @@
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
@@ -9,7 +7,7 @@ import classes from './StockCard.scss';
 
 export interface IStockCardProps {
   stock: IStock,
-}
+};
 
 class StockCard extends React.Component<any, IStockCardProps> {
   public render() {
@@ -37,9 +35,6 @@ class StockCard extends React.Component<any, IStockCardProps> {
             {stock.sector}
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small">Learn More</Button>
-        </CardActions>
       </Card>
     );
   }

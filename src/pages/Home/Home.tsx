@@ -21,13 +21,13 @@ class Home extends React.Component<any, IHomeProps> {
         <header className={classes.header}>
           <Typography
             className={classes.headerTitle}
-            variant="display4"
+            variant="display3"
             component="h1"
           >
             IEX Trading
             <Typography
               className={classes.headerSubTitle}
-              variant="display2"
+              variant="display1"
               component="small"
             >
               Bigest stocks

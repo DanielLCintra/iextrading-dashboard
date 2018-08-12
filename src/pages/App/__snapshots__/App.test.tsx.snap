@@ -12,7 +12,9 @@ exports[`App renders without crashing 1`] = `
     }
   }
 >
-  <WithStyles(CssBaseline) />
-  <Connect(Home) />
+  <div>
+    <WithStyles(CssBaseline) />
+    <Connect(Home) />
+  </div>
 </Provider>
 `;

@@ -14,15 +14,15 @@ import {
   loadStocksSucceed
 } from './stocks'
 
-describe('stocks duck', () => {
-  const createFakeStock = ():IStock => ({
-    companyName: 'Testing Co',
-    latestPrice: 0,
-    sector: 'Tests',
-    symbol: 'TST',
-    ytdChange: 0,
-  });
+export const createFakeStock = ():IStock => ({
+  companyName: 'Testing Co',
+  latestPrice: 0,
+  sector: 'Tests',
+  symbol: 'TST',
+  ytdChange: 0,
+});
 
+describe('stocks duck', () => {
   const data = [
     createFakeStock(),
     createFakeStock(),

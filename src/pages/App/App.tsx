@@ -6,6 +6,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk';
 import reducer from '../../ducks';
 import Home from '../Home';
+import classes from './App.scss';
 
 const store = createStore(
   reducer,
@@ -16,10 +17,10 @@ class App extends React.Component {
   public render() {
     return (
       <Provider store={store}>
-        <React.Fragment>
+        <div className={classes.App}>
           <CssBaseline />
           <Home />
-        </React.Fragment>
+        </div>
       </Provider>
     );
   }
