@@ -1,0 +1,19 @@
+.CompanyCard {
+  margin-bottom: 15px;
+
+  &Link {
+    color: inherit;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    text-decoration-color: inherit;
+  }
+
+  &Description {
+    margin: 15px 0 !important;
+  }
+
+  &Tag {
+    margin-right: 5px;
+  }
+}

@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import CompanyCard from '../../components/CompanyCard';
 import Header from '../../components/Header';
 import { ICompanyState } from '../../ducks/company';
 import classes from './StockDetail.scss';
 
 export interface IRouterProps {
-  symbol: string
+  symbol: string,
 };
 
 export interface IStockDetailProps extends RouteComponentProps<IRouterProps> {
@@ -27,15 +28,20 @@ class StockDetail extends React.Component<any, IStockDetailProps> {
   }
 
   public render() {
+    const {
+      loading,
+      error,
+      data,
+    } = this.props.company;
+
+    if (loading || error || !data) {
+      return null;
+    }
+
     return (
       <div className={classes.wrapper}>
         <Header />
-        <pre>
-          <code>
-            {JSON.stringify(this.props.match.params.symbol, null, 2)}
-            {JSON.stringify(this.props.company, null, 2)}
-          </code>
-        </pre>
+        <CompanyCard company={data} />
       </div>
     );
   }

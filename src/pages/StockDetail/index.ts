@@ -6,7 +6,7 @@ const mapStateToProps = (
   state:any,
   ownProps:IStockDetailProps,
 ) => ({
-  company: state[COMPANY_DUCK_NAME].get(ownProps.match.params.symbol),
+  company: state[COMPANY_DUCK_NAME].get(ownProps.match.params.symbol) || {},
 });
 
 const mapDispatchToProps = (dispatch:any) => ({
