@@ -1,8 +1,8 @@
+import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
-import { IStocksState } from '../../ducks/stocks';
+import StockCard from '../../components/StockCard';
+import { IStock, IStocksState } from '../../ducks/stocks';
 import classes from './Home.scss';
-
-import logo from '../../assets/logo.svg';
 
 export interface IHomeProps {
   loadStocks: () => any;
@@ -15,20 +15,35 @@ class Home extends React.Component<any, IHomeProps> {
   }
 
   public render() {
+    const stocks = this.props.stocks.data || [];
     return (
-      <div className={classes.Home}>
-        <header className={classes.HomeHeader}>
-          <img src={logo} className={classes.HomeLogo} alt="logo" />
-          <h1 className={classes.HomeTitle}>Welcome to React</h1>
+      <div className={classes.wrapper}>
+        <header className={classes.header}>
+          <Typography
+            className={classes.headerTitle}
+            variant="display4"
+            component="h1"
+          >
+            IEX Trading
+            <Typography
+              className={classes.headerSubTitle}
+              variant="display2"
+              component="small"
+            >
+              Bigest stocks
+            </Typography>
+          </Typography>
         </header>
-        <p className={classes.HomeIntro}>
-          To get started, edit <code>src/Home.tsx</code> and save to reload.
-        </p>
-        <pre>
-          <code>
-            {JSON.stringify(this.props.stocks, null, 2)}
-          </code>
-        </pre>
+        <div className={classes.stocksList}>
+          {
+            stocks.map((stock:IStock) => (
+              <StockCard
+                stock={stock}
+                key={stock.symbol}
+              />
+            ))
+          }
+        </div>
       </div>
     );
   }

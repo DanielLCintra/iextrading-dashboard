@@ -1,4 +1,4 @@
-import Axios, { AxiosInstance } from 'axios';
+import Axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import config from './config';
 
 class Api {
@@ -23,8 +23,8 @@ class Api {
         }
     }
 
-    public getStocks() {
-        return this.axios.get('/stock/market/list/gainers');
+    public getStocks(reqConfig?:AxiosRequestConfig) {
+        return this.axios.get('/stock/market/list/gainers', reqConfig);
     }
 }
 

@@ -1,28 +1,7 @@
-.Home {
-  text-align: center;
-
-  &Logo {
-    animation: logoSpin infinite 20s linear;
-    height: 80px;
-  }
-  
-  &Header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-  }
-  
-  &Title {
-    font-size: 1.5em;
-  }
-  
-  &Intro {
-    font-size: large;
-  }
+.header {
+  padding: 100px;
 }
 
-@keyframes logoSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.stocksList {
+  margin: 0 100px;
 }
