@@ -1,6 +1,7 @@
 import { mount } from 'enzyme';
 import * as React from 'react';
 import { MemoryRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { createFakeStock } from '../../ducks/stocks.test';
 import StockCard, { IStockCardProps } from './StockCard';
 
@@ -17,5 +18,9 @@ describe('StockCard', () => {
 
   it('renders without crashing', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a Link for the detail', () => {
+    expect(wrapper.find(Link).length).toBeGreaterThan(0);
   });
 });

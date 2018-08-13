@@ -12,7 +12,7 @@ exports[`StockCard renders without crashing 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "n7n1sr",
+            "key": "q5yksd",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -26,7 +26,7 @@ exports[`StockCard renders without crashing 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "n7n1sr",
+          "key": "q5yksd",
           "pathname": "/",
           "search": "",
           "state": undefined,

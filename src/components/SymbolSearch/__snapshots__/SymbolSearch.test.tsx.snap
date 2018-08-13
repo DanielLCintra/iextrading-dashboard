@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SymbolSearch renders without crashing 1`] = `
+<div>
+  <Autosuggest
+    alwaysRenderSuggestions={false}
+    focusInputOnSuggestionClick={true}
+    getSuggestionValue={[Function]}
+    highlightFirstSuggestion={false}
+    id="1"
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "placeholder": "Search",
+        "value": "",
+      }
+    }
+    multiSection={false}
+    onSuggestionsClearRequested={[Function]}
+    onSuggestionsFetchRequested={[Function]}
+    renderInputComponent={[Function]}
+    renderSuggestion={[Function]}
+    renderSuggestionsContainer={[Function]}
+    shouldRenderSuggestions={[Function]}
+    suggestions={Array []}
+    theme={
+      Object {
+        "container": undefined,
+        "suggestion": undefined,
+        "suggestionsContainerOpen": undefined,
+        "suggestionsList": undefined,
+      }
+    }
+  />
+</div>
+`;

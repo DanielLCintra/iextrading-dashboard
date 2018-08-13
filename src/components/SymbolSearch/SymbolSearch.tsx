@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 import { ISymbol, ISymbolsState } from '../../ducks/symbols';
 import classes from './SymbolSearch.scss';
 
-interface ISymbolSearchState {
+export interface ISymbolSearchState {
   symbol: string,
   suggestions: ISymbol[],
 }
 
-interface ISymbolSearchProps {
+export interface ISymbolSearchProps {
   symbols: ISymbolsState,
   loadSymbols: () => any,
 }

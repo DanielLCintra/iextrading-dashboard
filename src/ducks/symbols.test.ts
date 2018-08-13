@@ -14,15 +14,15 @@ import {
   loadSymbolsSucceed
 } from './symbols'
 
-export const createFakeSymbol = ():ISymbol => ({
+export const createFakeSymbol = (symbol:string):ISymbol => ({
   name: 'Testing',
-  symbol: 'TST',
+  symbol,
 });
 
 describe('symbols duck', () => {
   const data = [
-    createFakeSymbol(),
-    createFakeSymbol(),
+    createFakeSymbol('TST1'),
+    createFakeSymbol('TST2'),
   ];
 
   const error = new Error('Testing failure');

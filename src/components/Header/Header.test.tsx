@@ -1,14 +1,9 @@
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import * as React from 'react';
-import { MemoryRouter } from 'react-router-dom';
 import Header from './Header';
 
 describe('Header', () => {
-  const wrapper = mount(
-    <MemoryRouter>
-      <Header />
-    </MemoryRouter>
-  );
+  const wrapper = shallow(<Header />);
 
   it('renders without crashing', () => {
     expect(wrapper).toMatchSnapshot();
