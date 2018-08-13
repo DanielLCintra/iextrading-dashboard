@@ -1,5 +1,6 @@
+import Button from '@material-ui/core/Button';
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import CompanyCard from '../../components/CompanyCard';
 import { ICompanyState } from '../../ducks/company';
 import classes from './StockDetail.scss';
@@ -49,7 +50,16 @@ class StockDetail extends React.Component<IStockDetailProps> {
     }
 
     return (
-      <div className={classes.wrapper}>
+      <div className={classes.StockDetail}>
+        <div className={classes.StockDetailHeader}>
+          <Link
+            to="/"
+            title="Back to list"
+            className={classes.StockDetailBackLink}
+          >
+            <Button>Back</Button>
+          </Link>
+        </div>
         <CompanyCard company={data} />
       </div>
     );
