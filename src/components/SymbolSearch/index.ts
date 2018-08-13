@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
+
 import {
   DUCK_NAME as SYMBOLS_DUCK_NAME,
   loadSymbols,
 } from '../../ducks/symbols';
+
 import SymbolSearch from './SymbolSearch';
 
 const mapStateToProps = (state:any) => ({

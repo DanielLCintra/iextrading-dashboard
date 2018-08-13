@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Header from '../../components/Header';
 import StockCard from '../../components/StockCard';
 import { IStock, IStocksState } from '../../ducks/stocks';
 import classes from './Home.scss';
@@ -18,7 +17,6 @@ class Home extends React.Component<IHomeProps> {
     const stocks = this.props.stocks.data || [];
     return (
       <div className={classes.wrapper}>
-        <Header />
         <div className={classes.stocksList}>
           {
             stocks.map((stock:IStock) => (

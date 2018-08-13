@@ -2,7 +2,6 @@
 
 exports[`Home Page renders without crashing 1`] = `
 <div>
-  <Header />
   <div />
 </div>
 `;

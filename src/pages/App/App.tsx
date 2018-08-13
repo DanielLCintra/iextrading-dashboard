@@ -1,6 +1,7 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import Header from '../../components/Header';
 import Home from '../Home';
 import StockDetail from '../StockDetail';
 import classes from './App.scss';
@@ -10,8 +11,11 @@ class App extends React.Component {
     return (
       <div className={classes.App}>
         <CssBaseline />
-        <Route exact={true} path="/" component={Home}/>
-        <Route path="/stock/:symbol" component={StockDetail}/>
+        <Header />
+        <Switch>
+          <Route exact={true} path="/" component={Home}/>
+          <Route path="/stock/:symbol" component={StockDetail}/>
+        </Switch>
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import CompanyCard from '../../components/CompanyCard';
-import Header from '../../components/Header';
 import { ICompanyState } from '../../ducks/company';
 import classes from './StockDetail.scss';
 
@@ -18,13 +17,24 @@ class StockDetail extends React.Component<IStockDetailProps> {
   public componentDidMount() {
     const {
       loadCompany,
-      match: {
-        params: {
-          symbol,
-        },
-      },
+      match: { params: { symbol } },
     } = this.props;
+
     loadCompany(symbol);
+  }
+
+  public componentDidUpdate(prevProps:IStockDetailProps) {
+    const {
+      loadCompany,
+      match: { params: { symbol } },
+    } = this.props;
+
+    if (
+      prevProps.match.params.symbol !==
+      symbol
+    ) {
+      loadCompany(symbol);
+    }
   }
 
   public render() {
@@ -40,7 +50,6 @@ class StockDetail extends React.Component<IStockDetailProps> {
 
     return (
       <div className={classes.wrapper}>
-        <Header />
         <CompanyCard company={data} />
       </div>
     );

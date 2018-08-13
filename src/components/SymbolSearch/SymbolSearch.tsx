@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import * as React from 'react';
 import * as Autosuggest from 'react-autosuggest';
+import { Link } from 'react-router-dom';
 import { ISymbol, ISymbolsState } from '../../ducks/symbols';
 import classes from './SymbolSearch.scss';
 
@@ -26,44 +27,6 @@ class SymbolSearch extends React.Component<ISymbolSearchProps, ISymbolSearchStat
 
   public componentDidMount() {
     this.props.loadSymbols();
-  }
-
-  public renderInputComponent(inputProps: Autosuggest.InputProps<ISymbol>):React.ReactNode {
-    const {
-      inputRef = () => { return; },
-      ref,
-      onChange,
-      ...other
-    } = inputProps;
-
-    return (
-      <TextField
-        {...other}
-        fullWidth={true}
-        InputProps={{
-          classes: {
-            root: classes.SymbolSearchInput,
-          },
-          inputRef: node => {
-            ref(node);
-            inputRef(node);
-          },
-        }}
-        onChange={onChange}
-        defaultValue={undefined}
-        type="search"
-      />
-    );
-  }
-
-  public renderSuggestion(suggestion:ISymbol, params:Autosuggest.RenderSuggestionParams) {
-    const { isHighlighted } = params;
-
-    return (
-      <MenuItem selected={isHighlighted} component="div">
-        {suggestion.symbol}, {suggestion.name}
-      </MenuItem>
-    );
   }
 
   public getSuggestionValue(suggestion:ISymbol) {
@@ -106,13 +69,13 @@ class SymbolSearch extends React.Component<ISymbolSearchProps, ISymbolSearchStat
     this.setState({
       suggestions: this.getSuggestions(value),
     });
-  };
+  }
 
   public handleSuggestionsClearRequested = () => {
     this.setState({
       suggestions: [],
     });
-  };
+  }
 
   public handleChange = (event:React.FormEvent<any>, params:Autosuggest.ChangeEvent) => {
     const { newValue } = params;
@@ -120,6 +83,53 @@ class SymbolSearch extends React.Component<ISymbolSearchProps, ISymbolSearchStat
       symbol: newValue,
     });
   };
+
+  public renderInputComponent(inputProps: Autosuggest.InputProps<ISymbol>):React.ReactNode {
+    const {
+      inputRef = () => { return; },
+      ref,
+      onChange,
+      ...other
+    } = inputProps;
+
+    return (
+      <TextField
+        {...other}
+        fullWidth={true}
+        InputProps={{
+          classes: {
+            root: classes.SymbolSearchInput,
+          },
+          inputRef: node => {
+            ref(node);
+            inputRef(node);
+          },
+        }}
+        onChange={onChange}
+        defaultValue={undefined}
+        type="search"
+      />
+    );
+  }
+
+  public renderSuggestion(suggestion:ISymbol, params:Autosuggest.RenderSuggestionParams) {
+    const { isHighlighted } = params;
+    const text = `${suggestion.symbol}, ${suggestion.name}`;
+
+    return (
+      <Link
+        to={`/stock/${suggestion.symbol}`}
+        title={`See ${text}`}
+      >
+        <MenuItem
+          selected={isHighlighted}
+          component="div"
+        >
+          {text}
+        </MenuItem>
+      </Link>
+    );
+  }
 
   public renderSuggestionsContainer(params:Autosuggest.RenderSuggestionsContainerParams) {
     return (

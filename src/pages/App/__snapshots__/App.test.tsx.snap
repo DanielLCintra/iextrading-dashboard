@@ -3,14 +3,17 @@
 exports[`App renders without crashing 1`] = `
 <div>
   <WithStyles(CssBaseline) />
-  <Route
-    component={[Function]}
-    exact={true}
-    path="/"
-  />
-  <Route
-    component={[Function]}
-    path="/stock/:symbol"
-  />
+  <Header />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/stock/:symbol"
+    />
+  </Switch>
 </div>
 `;
