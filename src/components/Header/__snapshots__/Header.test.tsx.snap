@@ -16,12 +16,6 @@ exports[`Header renders without crashing 1`] = `
     variant="display3"
   >
     IEX Trading
-    <WithStyles(Typography)
-      component="small"
-      variant="display1"
-    >
-      Bigest stocks
-    </WithStyles(Typography)>
   </WithStyles(Typography)>
   <Connect(SymbolSearch) />
 </header>

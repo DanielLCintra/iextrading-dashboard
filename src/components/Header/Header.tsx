@@ -18,13 +18,6 @@ class Header extends React.Component {
           component="h1"
         >
           IEX Trading
-          <Typography
-            className={classes.HeaderSubTitle}
-            variant="display1"
-            component="small"
-          >
-            Bigest stocks
-          </Typography>
         </Typography>
         <SymbolSearch />
       </header>
