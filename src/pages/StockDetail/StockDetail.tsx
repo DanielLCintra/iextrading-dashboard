@@ -2,6 +2,7 @@ import Button from '@material-ui/core/Button';
 import * as React from 'react';
 import { Link, RouteComponentProps } from 'react-router-dom';
 import CompanyCard from '../../components/CompanyCard';
+import StockChart from '../../components/StockChart';
 import { ICompanyState } from '../../ducks/company';
 import classes from './StockDetail.scss';
 
@@ -40,10 +41,13 @@ class StockDetail extends React.Component<IStockDetailProps> {
 
   public render() {
     const {
-      loading,
-      error,
-      data,
-    } = this.props.company;
+      company: {
+        loading,
+        error,
+        data,
+      },
+      match: { params: { symbol } },
+    } = this.props;
 
     if (loading || error || !data) {
       return null;
@@ -61,6 +65,7 @@ class StockDetail extends React.Component<IStockDetailProps> {
           </Link>
         </div>
         <CompanyCard company={data} />
+        <StockChart symbol={symbol} />
       </div>
     );
   }

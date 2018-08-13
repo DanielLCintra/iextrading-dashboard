@@ -31,6 +31,10 @@ class Api {
     return this.axios.get(`/stock/${symbol}/company`, reqConfig);
   }
 
+  public getChart(symbol:string, reqConfig?:AxiosRequestConfig) {
+    return this.axios.get(`/stock/${symbol}/chart/dynamic`, reqConfig);
+  }
+
   public getSymbols(reqConfig?:AxiosRequestConfig) {
     return this.axios.get('/ref-data/symbols', reqConfig);
   }

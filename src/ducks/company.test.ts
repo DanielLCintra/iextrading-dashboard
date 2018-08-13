@@ -23,7 +23,7 @@ export const createFakeCompany = (symbol:string):ICompany => ({
   industry: 'Tests',
   sector: 'Tests',
   symbol,
-  tags: ['T', 'E', 'S', 'T'],
+  tags: ['T', 'A', 'G'],
   website: 'http://test.com',
 });
 

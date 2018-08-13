@@ -4,6 +4,8 @@ import * as React from 'react';
 import { INITIAL_COMPANY_STATE } from '../../ducks/company';
 import StockDetail, { IStockDetailProps } from './StockDetail';
 
+jest.mock('../../components/StockChart', () => () => null);
+
 describe('StockDetail', () => {
   const symbol = 'TST';
 
