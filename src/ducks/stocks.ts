@@ -82,10 +82,7 @@ const reducer = (state = INITIAL_STATE, action:AnyAction) => {
   case LOAD_STOCKS_SUCCEED:
     return {
       ...state,
-      data: [
-        ...(state.data || []),
-        ...action.data,
-      ],
+      data: action.data,
       loading: false,
     };
   case LOAD_STOCKS_FAILED:
